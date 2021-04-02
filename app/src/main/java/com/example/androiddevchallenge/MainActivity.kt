@@ -22,7 +22,8 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.androiddevchallenge.login.WelcomeScreen
+import androidx.navigation.compose.rememberNavController
+import com.example.androiddevchallenge.navigation.AppNavHost
 import com.example.androiddevchallenge.ui.theme.MyTheme
 
 class MainActivity : AppCompatActivity() {
@@ -39,8 +40,10 @@ class MainActivity : AppCompatActivity() {
 // Start building your app here!
 @Composable
 fun MyApp() {
+    val navController = rememberNavController()
+
     Surface(color = MaterialTheme.colors.background) {
-        WelcomeScreen()
+        AppNavHost(navController = navController)
     }
 }
 

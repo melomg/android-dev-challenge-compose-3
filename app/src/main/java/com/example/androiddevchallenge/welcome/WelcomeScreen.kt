@@ -40,7 +40,10 @@ import com.example.androiddevchallenge.ui.theme.shapes
 import com.example.androiddevchallenge.ui.theme.typography
 
 @Composable
-fun WelcomeScreen() {
+fun WelcomeScreen(
+    onCreateAccountClicked: () -> Unit,
+    onLoginClicked: () -> Unit
+) {
     Surface(
         color = colors.primary,
     ) {
@@ -92,11 +95,11 @@ fun WelcomeScreen() {
             )
 
             Button(
-                onClick = {},
+                onClick = onCreateAccountClicked,
                 modifier = Modifier
                     .fillMaxWidth()
                     .requiredHeight(48.dp)
-                    .padding(top = 0.dp, start = 16.dp, end = 16.dp)
+                    .padding(start = 16.dp, end = 16.dp)
                     .constrainAs(signUp) {
                         top.linkTo(bloomSolutions.bottom, margin = 40.dp)
                         start.linkTo(parent.start)
@@ -113,13 +116,15 @@ fun WelcomeScreen() {
             }
 
             TextButton(
-                onClick = {},
+                onClick = onLoginClicked,
                 modifier = Modifier
                     .fillMaxWidth()
                     .requiredHeight(48.dp)
-                    .padding(top = 0.dp, start = 16.dp, end = 16.dp)
+                    .padding(start = 16.dp, end = 16.dp)
                     .constrainAs(login) {
                         top.linkTo(signUp.bottom, margin = 8.dp)
+                        start.linkTo(parent.start)
+                        end.linkTo(parent.end)
                     },
             ) {
                 Text(
@@ -138,7 +143,7 @@ fun LightPreviewWelcomeScreen() {
     MyTheme(
         darkTheme = false,
     ) {
-        WelcomeScreen()
+        WelcomeScreen({}, {})
     }
 }
 
@@ -148,6 +153,6 @@ fun DarkPreviewWelcomeScreen() {
     MyTheme(
         darkTheme = true,
     ) {
-        WelcomeScreen()
+        WelcomeScreen({}, {})
     }
 }
