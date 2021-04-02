@@ -1,8 +1,31 @@
+/*
+ * Copyright 2021 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.example.androiddevchallenge.login
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.*
-import androidx.compose.material.*
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.requiredHeight
+import androidx.compose.material.Button
+import androidx.compose.material.ButtonDefaults
+import androidx.compose.material.MaterialTheme.colors
+import androidx.compose.material.Surface
+import androidx.compose.material.Text
+import androidx.compose.material.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
@@ -19,12 +42,11 @@ import com.example.androiddevchallenge.ui.theme.typography
 @Composable
 fun WelcomeScreen() {
     Surface(
-        color = MaterialTheme.colors.primary,
+        color = colors.primary,
     ) {
         ConstraintLayout(
             modifier = Modifier
-                .fillMaxWidth()
-                .fillMaxHeight()
+                .fillMaxSize()
         ) {
             val (bloomImage, bloomLogo, bloomSolutions, signUp, login) = createRefs()
 
@@ -80,12 +102,12 @@ fun WelcomeScreen() {
                         start.linkTo(parent.start)
                         end.linkTo(parent.end)
                     },
-                colors = ButtonDefaults.buttonColors(backgroundColor = MaterialTheme.colors.secondary),
+                colors = ButtonDefaults.buttonColors(backgroundColor = colors.secondary),
                 shape = shapes.medium,
             ) {
                 Text(
                     text = stringResource(id = R.string.create_account),
-                    color = MaterialTheme.colors.onSecondary,
+                    color = colors.onSecondary,
                     style = typography.button,
                 )
             }
@@ -102,7 +124,7 @@ fun WelcomeScreen() {
             ) {
                 Text(
                     text = stringResource(id = R.string.login),
-                    color = MaterialTheme.colors.onPrimary,
+                    color = colors.onPrimary,
                     style = typography.button,
                 )
             }
