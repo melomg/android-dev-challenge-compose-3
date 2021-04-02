@@ -17,10 +17,10 @@
         <item name="colorSecondary">@color/green_300</item>
         <item name="colorOnSecondary">@color/gray</item>
         <item name="android:colorBackground">@color/gray</item>
+        <item name="colorOnBackground">@color/white</item>
         <!--
                 <item name="colorPrimaryVariant">@android:color/transparent</item>
         -->
-        <item name="colorOnBackground">@color/white</item>
         <item name="colorSurface">@color/white_150</item>
         <item name="colorOnSurface">@color/white_850</item>
         <!--        <item name="colorPrimaryVariant">@color/purple_700</item>-->

@@ -17,10 +17,10 @@
         <item name="colorSecondary">@color/pink_900</item>
         <item name="colorOnSecondary">@color/white</item>
         <item name="android:colorBackground">@color/white</item>
+        <item name="colorOnBackground">@color/gray</item>
         <!--
                 <item name="colorPrimaryVariant">@android:color/transparent</item>
         -->
-        <item name="colorOnBackground">@color/gray</item>
         <item name="colorSurface">@color/white_850</item>
         <item name="colorOnSurface">@color/gray</item>
         <!-- Status bar color. -->
