@@ -17,27 +17,60 @@ package com.example.androiddevchallenge.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import com.example.androiddevchallenge.R
 
-// Set of Material typography styles to start with
+private val nunitosans = FontFamily(
+    Font(R.font.nunitosans_light, FontWeight.Light),
+    Font(R.font.nunitosans_regular, FontWeight.Normal),
+    Font(R.font.nunitosans_semibold, FontWeight.SemiBold),
+    Font(R.font.nunitosans_bold, FontWeight.Bold),
+)
+
 val typography = Typography(
+    h1 = TextStyle(
+        fontFamily = nunitosans,
+        fontSize = 18.sp,
+        fontWeight = FontWeight.Bold,
+        letterSpacing = 0.sp,
+    ),
+    h2 = TextStyle(
+        fontFamily = nunitosans,
+        fontSize = 14.sp,
+        fontWeight = FontWeight.Bold,
+        letterSpacing = (0.15).sp,
+    ),
+    subtitle1 = TextStyle(
+        fontFamily = nunitosans,
+        fontSize = 16.sp,
+        fontWeight = FontWeight.Light,
+        letterSpacing = 0.sp,
+    ),
     body1 = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
-        fontSize = 16.sp
-    )
-        /* Other default text styles to override
+        fontFamily = nunitosans,
+        fontSize = 14.sp,
+        fontWeight = FontWeight.Light,
+        letterSpacing = 0.sp,
+    ),
+    body2 = TextStyle(
+        fontFamily = nunitosans,
+        fontSize = 12.sp,
+        fontWeight = FontWeight.Light,
+        letterSpacing = 0.sp,
+    ),
     button = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.W500,
-        fontSize = 14.sp
+        fontFamily = nunitosans,
+        fontSize = 14.sp,
+        fontWeight = FontWeight.SemiBold,
+        letterSpacing = 1.sp,
     ),
     caption = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
-        fontSize = 12.sp
-    )
-    */
+        fontFamily = nunitosans,
+        fontSize = 12.sp,
+        fontWeight = FontWeight.SemiBold,
+        letterSpacing = 0.sp,
+    ),
 )
